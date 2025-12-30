@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>SecureFileShare</title>
+    <script>
+      (function() {
+        const storedTheme = localStorage.getItem('securefileshare');
+        const storedLang = localStorage.getItem('securefileshare_lang');
+
+        const theme = storedTheme ||
+          (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        const lang = storedLang || 'ru';
+
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+
+        document.documentElement.lang = lang;
+
+        window.__THEME__ = theme;
+        window.__LANG__ = lang;
+      })();
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        color-scheme: light dark;
+      }
+
+      html.dark {
+        color-scheme: dark;
+        background-color: #1a1a1a;
+        color: white;
+      }
+
+      html:not(.dark) {
+        background-color: white;
+        color: black;
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        transition: none;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      #app-loading {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .loading-header {
+        max-width: 48rem;
+        margin: 0 auto;
+        width: 100%;
+        padding: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .loading-title {
+        width: 150px;
+        height: 28px;
+        border-radius: 0.5rem;
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      html.dark .loading-title {
+        background-color: #2a2a2a;
+      }
+
+      html:not(.dark) .loading-title {
+        background-color: #e5e7eb;
+      }
+
+      .loading-buttons {
+        display: flex;
+        gap: 0.5rem;
+      }
+
+      .loading-button {
+        width: 100px;
+        height: 40px;
+        border-radius: 0.5rem;
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      html.dark .loading-button {
+        background-color: #2a2a2a;
+      }
+
+      html:not(.dark) .loading-button {
+        background-color: #e5e7eb;
+      }
+
+      .loading-main {
+        max-width: 48rem;
+        margin: 0 auto;
+        width: 100%;
+        padding: 2rem 1.5rem;
+        flex: 1;
+      }
+
+      .loading-card {
+        border-radius: 1rem;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-width: 1px;
+      }
+
+      html.dark .loading-card {
+        background-color: #151515;
+        border-color: #374151;
+      }
+
+      html:not(.dark) .loading-card {
+        background-color: #f9fafb;
+        border-color: #e5e7eb;
+      }
+
+      .loading-box {
+        height: 200px;
+        border-radius: 0.75rem;
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      html.dark .loading-box {
+        background-color: #2a2a2a;
+      }
+
+      html:not(.dark) .loading-box {
+        background-color: #e5e7eb;
+      }
+
+      @keyframes pulse {
+        0%, 100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+      }
+
+      #app:not(:empty) ~ #app-loading {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="app-loading">
+      <div class="loading-header">
+        <div class="loading-title"></div>
+        <div class="loading-buttons">
+          <div class="loading-button"></div>
+          <div class="loading-button"></div>
+        </div>
+      </div>
+      <div class="loading-main">
+        <div class="loading-card">
+          <div class="loading-box"></div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

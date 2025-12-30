@@ -1,0 +1,23 @@
+{
+  "name": "secure-file-share",
+  "version": "1.0.0",
+  "description": "Secure file sharing service with Telegram bot integration",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd server && npm install && cd ../telegram-bot && npm install && cd ../frontend && npm install",
+    "dev:server": "cd server && npm run dev",
+    "dev:bot": "cd telegram-bot && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "start:server": "cd server && npm start",
+    "start:bot": "cd telegram-bot && npm start",
+    "build:frontend": "cd frontend && npm run build"
+  },
+  "keywords": [
+    "file-sharing",
+    "telegram-bot",
+    "secure",
+    "encryption"
+  ],
+  "author": "",
+  "license": "MIT"
+}
