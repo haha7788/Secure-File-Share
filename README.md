@@ -224,9 +224,6 @@ curl http://localhost:3000/download/abc123xyz?password=secret123 \
 | Command | Description |
 |---------|-------------|
 | `/start` | Main menu |
-| `/help` | Usage guide |
-| `/upload` | Upload file/text |
-| `/download` | Download by link |
 
 ### Getting Token
 
@@ -535,9 +532,6 @@ curl http://localhost:3000/download/abc123xyz?password=secret123 \
 | Команда | Описание |
 |---------|----------|
 | `/start` | Главное меню |
-| `/help` | Справка |
-| `/upload` | Загрузить файл/текст |
-| `/download` | Скачать по ссылке |
 
 ### Получение токена
 
