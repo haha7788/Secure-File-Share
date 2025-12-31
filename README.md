@@ -384,13 +384,13 @@ Made with ❤️ and ☕
 
 ### Веб-интерфейс
 
-<img src=".github/assets/web-upload.png" width="45%" alt="Загрузка">
-<img src=".github/assets/web-download.png" width="45%" alt="Скачивание">
+<img src=".github/assets/web-upload.jpg" width="45%" alt="Загрузка">
+<img src=".github/assets/web-download.jpg" width="45%" alt="Скачивание">
 
 ### Telegram Bot
 
-<img src=".github/assets/bot-menu.png" width="45%" alt="Меню бота">
-<img src=".github/assets/bot-upload.png" width="45%" alt="Загрузка через бота">
+<img src=".github/assets/bot-menu.jpg" width="45%" alt="Меню бота">
+<img src=".github/assets/bot-upload.jpg" width="45%" alt="Загрузка через бота">
 
 </div>
 
